@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-btn class="my-5 ml-5">Add New Book</v-btn>
+        <v-btn class="my-5 ml-5" @click.stop="onShowPopupAdd">Add New Book</v-btn>
         <v-table
             fixed-header
             height="calc( 100vh - 65px )"
@@ -46,16 +46,22 @@
             </tbody>
         </v-table>
     </div>
+    <CustomPopup v-if="isShowPopupAdd" v-model:isShow="isShowPopupAdd"></CustomPopup>
 </template>
 <script setup name="Book">
-import { reactive } from "@vue/reactivity";
+import { reactive, ref } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
 import books from "../assets/data/Book.json";
+import CustomPopup from '../components/Popup.vue';
 
-    const listBook = reactive({
-        data: []
-    })
+const listBook = reactive({
+    data: []
+})
+const isShowPopupAdd = ref(false);
 
+const onShowPopupAdd = () => {
+    isShowPopupAdd.value = true;
+}
 onMounted(async () => {
     listBook.data = [...books].splice(1,11);
 })
