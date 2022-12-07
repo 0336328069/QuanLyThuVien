@@ -34,13 +34,18 @@
                 </td>
                 <td>{{ item.subtitle }}</td>
                 <td>{{item.quantity}}</td>
-                <td>
-                    <v-btn class="mb-2 rounded-full !font-bold !text-[#0091A8]">
-                        EDIT
-                    </v-btn>
-                    <v-btn class="mb-2 rounded-full !font-bold !text-[#CB3838]">
-                        DELETE
-                    </v-btn>
+                <td class="p-0">
+                    <div class="w-full grid grid-cols-1 mt-4">
+                        <v-btn class="mb-2 rounded-full !font-bold !text-[#0091A8]">
+                            rental
+                        </v-btn>
+                        <v-btn class="mb-2 rounded-full !font-bold !text-[#0091A8]">
+                            EDIT
+                        </v-btn>
+                        <v-btn class="rounded-full !font-bold !text-[#CB3838]">
+                            DELETE
+                        </v-btn>
+                    </div>
                 </td>
             </tr>
             </tbody>
