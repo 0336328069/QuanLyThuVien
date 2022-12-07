@@ -1,0 +1,182 @@
+[
+  {
+    "id":1,
+    "title": "Game Hacking Academy",
+    "subtitle": "A Beginner&#039;s Guide to Understanding Game Hacking Techniques",
+    "isbn13": "1001668595152",
+    "quantity":2,
+    "image": "https://itbook.store/img/books/1001668595152.png",
+    "url": "https://itbook.store/books/1001668595152"
+  },
+  {
+    "id":2,
+    "title": "Kafka: The Definitive Guide, 2nd Edition",
+    "subtitle": "Real-Time Data and Stream Processing at Scale",
+    "isbn13": "9781492043089",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9781492043089.png",
+    "url": "https://itbook.store/books/9781492043089"
+  },
+  {
+    "id":4,
+    "title": "Deno Succinctly",
+    "subtitle": "",
+    "isbn13": "9781642002140",
+    "quantity":2,
+    "image": "https://itbook.store/img/books/9781642002140.png",
+    "url": "https://itbook.store/books/9781642002140"
+  },
+  {
+    "id":5,
+    "title": "Robotics, AI, and Humanity",
+    "subtitle": "Science, Ethics, and Policy",
+    "isbn13": "9783030541729",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9783030541729.png",
+    "url": "https://itbook.store/books/9783030541729"
+  },
+  {
+    "id":6,
+    "title": "Introduction to Autonomous Robots, 3rd Edition",
+    "subtitle": "",
+    "isbn13": "9781493773077",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9781493773077.png",
+    "url": "https://itbook.store/books/9781493773077"
+  },
+  {
+    "id":7,
+    "title": "Learning Go",
+    "subtitle": "An Idiomatic Approach to Real-World Go Programming",
+    "isbn13": "9781492077213",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9781492077213.png",
+    "url": "https://itbook.store/books/9781492077213"
+  },
+  {
+    "id":8,
+    "title": "Open Workbook of Cryptology",
+    "subtitle": "A project-based introduction to crypto in Python",
+    "isbn13": "1001656678502",
+    "quantity":2,
+    "image": "https://itbook.store/img/books/1001656678502.png",
+    "url": "https://itbook.store/books/1001656678502"
+  },
+  {
+    "id":9,
+    "title": "Embracing Modern C++ Safely",
+    "subtitle": "",
+    "isbn13": "9780137380350",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9780137380350.png",
+    "url": "https://itbook.store/books/9780137380350"
+  },
+  {
+    "id":10,
+    "title": "Retro Gaming with Raspberry Pi, 2nd Edition",
+    "subtitle": "",
+    "isbn13": "1001656317756",
+    "quantity":2,
+    "image": "https://itbook.store/img/books/1001656317756.png",
+    "url": "https://itbook.store/books/1001656317756"
+  },
+  {
+    "id":11,
+    "title": "Debugging with GDB",
+    "subtitle": "The GNU Source-Level Debugger",
+    "isbn13": "9780983159230",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9780983159230.png",
+    "url": "https://itbook.store/books/9780983159230"
+  },
+  {
+    "id":12,
+    "title": "Grokking Machine Learning",
+    "subtitle": "",
+    "isbn13": "9781617295911",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9781617295911.png",
+    "url": "https://itbook.store/books/9781617295911"
+  },
+  {
+    "id":13,
+    "title": "Functional Programming in Kotlin",
+    "subtitle": "",
+    "isbn13": "9781617297168",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9781617297168.png",
+    "url": "https://itbook.store/books/9781617297168"
+  },
+  {
+    "id":14,
+    "title": "Kubernetes Native Microservices with Quarkus and MicroProfile",
+    "subtitle": "",
+    "isbn13": "9781617298653",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9781617298653.png",
+    "url": "https://itbook.store/books/9781617298653"
+  },
+  {
+    "id":15,
+    "title": "How to Lead in Data Science",
+    "subtitle": "",
+    "isbn13": "9781617298899",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9781617298899.png",
+    "url": "https://itbook.store/books/9781617298899"
+  },
+  {
+    "id":16,
+    "title": "Functional Programming in C#, 2nd Edition",
+    "subtitle": "",
+    "isbn13": "9781617299827",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9781617299827.png",
+    "url": "https://itbook.store/books/9781617299827"
+  },
+  {
+    "id":17,
+    "title": "Azure Pipelines Succinctly",
+    "subtitle": "",
+    "isbn13": "9781642002133",
+    "quantity":2,
+    "image": "https://itbook.store/img/books/9781642002133.png",
+    "url": "https://itbook.store/books/9781642002133"
+  },
+  {
+    "id":18,
+    "title": "Microsoft Excel Inside Out",
+    "subtitle": "Office 2021 and Microsoft 365",
+    "isbn13": "9780137559534",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9780137559534.png",
+    "url": "https://itbook.store/books/9780137559534"
+  },
+  {
+    "id":19,
+    "title": "Windows Internals, Part 2, 7th Edition",
+    "subtitle": "",
+    "isbn13": "9780135462409",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9780135462409.png",
+    "url": "https://itbook.store/books/9780135462409"
+  },
+  {
+    "id":20,
+    "title": "Microsoft Office Inside Out",
+    "subtitle": "Office 2021 and Microsoft 365",
+    "isbn13": "9780137564095",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9780137564095.png",
+    "url": "https://itbook.store/books/9780137564095"
+  },
+  {
+    "id":21,
+    "title": "Microsoft Excel Step by Step",
+    "subtitle": "Office 2021 and Microsoft 365",
+    "isbn13": "9780137564279",
+    "quantity": 2,
+    "image": "https://itbook.store/img/books/9780137564279.png",
+    "url": "https://itbook.store/books/9780137564279"
+  }
+]

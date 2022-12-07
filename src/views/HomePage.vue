@@ -7,8 +7,8 @@
         <NavigationDrawer></NavigationDrawer>
       </v-navigation-drawer>
       <v-main>
-        <v-card height="200px">
-          EE
+        <v-card>
+          <router-view></router-view>
         </v-card>
       </v-main>
     </v-layout>
@@ -16,7 +16,7 @@
 
 <script lang="ts" setup name="HomePage">
 import HeaderComponent from '../components/Header.vue';
-import NavigationDrawer from '../components/NavigationDrawer.vue'
+import NavigationDrawer from '../components/NavigationDrawer.vue';
 </script>
 
 <style>

@@ -11,7 +11,17 @@ export const router = createRouter({
             component : () => import('../views/HomePage.vue'),
             meta: {
                 layout: Main
-            }
+            },
+            children: [
+                {
+                    path: 'borrow-book',
+                    component: () => import('../components/BorrowBook.vue')
+                },
+                {
+                    path: 'book',
+                    component: () => import('../components/Book.vue')
+                }
+            ]
         }
     ]
 })
