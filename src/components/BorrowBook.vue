@@ -6,35 +6,34 @@
     <thead>
       <tr>
         <th class="text-left">
-          Name
+          Tên Sách
         </th>
         <th class="text-left">
-          Image
+          Ảnh
         </th>
         <th class="text-left">
-          Calories
+          Số Lượng
         </th>
         <th class="text-left">
-          Price
+          Ngày Mượn
         </th>
         <th class="text-left">
+          Ngày Trả
         </th>
       </tr>
     </thead>
     <tbody>
       <tr
-        v-for="item in listBook.data"
+        v-for="item in borrowStore.listBook"
         :key="item.name"
       >
         <td>{{ item.title }}</td>
         <td class="text-left">
             <img :src="item.image" alt="">
         </td>
-        <td>{{ item.subtitle }}</td>
-        <td>{{item.price}}</td>
-        <td>
-            <a :href="item.url" target="_blank" class="text-[#0091A8] hover:underline">Details</a>           
-        </td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.date[0] }}</td>
+        <td>{{item.date[1]}}</td>
       </tr>
     </tbody>
   </v-table>
@@ -42,13 +41,7 @@
 <script setup name="BorrowBook">
 import { reactive } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
-import books from "../assets/data/Book.json";
+import { useBorrowBook } from '../store/listBook';
 
-    const listBook = reactive({
-        data: []
-    })
-
-onMounted(async () => {
-    listBook.data = [...books].splice(11);
-})
+const borrowStore = useBorrowBook();
 </script>

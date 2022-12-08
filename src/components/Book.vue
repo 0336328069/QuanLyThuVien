@@ -8,19 +8,19 @@
             <thead>
             <tr>
                 <th class="text-left">
-                Name
+                Tên Sách
                 </th>
                 <th class="text-left">
-                Image
+                Ảnh
                 </th>
                 <th class="text-left">
-                Calories
+                Mô Tả
+                </th>
+                <th class="text-left whitespace-nowrap">
+                Số Lượng
                 </th>
                 <th class="text-left">
-                Quantity
-                </th>
-                <th class="text-left">
-                Author
+                Tác Giả
                 </th>
                 <th class="text-left">
                 </th>
@@ -40,7 +40,7 @@
                 <td>{{item.author}}</td>
                 <td class="p-0">
                     <div class="w-full grid grid-cols-1 mt-4">
-                        <v-btn class="mb-2 rounded-full !font-bold !text-[#0091A8]">
+                        <v-btn @click="onShowBorrow(item)" class="mb-2 rounded-full !font-bold !text-[#0091A8]">
                             rental
                         </v-btn>
                         <v-btn class="mb-2 rounded-full !font-bold !text-[#0091A8]">
@@ -55,13 +55,15 @@
             </tbody>
         </v-table>
     </div>
-    <CustomPopup v-if="isShowPopupAdd" v-model:isShow="isShowPopupAdd"></CustomPopup>
+    <CustomPopup @onSubmit="handleSubmit($event)" v-if="isShowPopupAdd" v-model:isShow="isShowPopupAdd"></CustomPopup>
+    <BorrowPopup v-if="isShowBorrowPopup" v-model:isShow="isShowBorrowPopup" :initData="dataProps.data"></BorrowPopup>
 </template>
 <script setup name="Book">
 import { reactive, ref } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
 import books from "../assets/data/Book.json";
 import CustomPopup from '../components/Popup.vue';
+import BorrowPopup from '../components/BorrowPopup.vue';
 
 const listBook = reactive({
     data: [
@@ -72,7 +74,6 @@ const listBook = reactive({
             author:'Than Justien',
             quantity:2,
             image: "https://itbook.store/img/books/1001668595152.png",
-            url: "https://itbook.store/books/1001668595152"
         },
         {
             id:2,
@@ -81,7 +82,6 @@ const listBook = reactive({
             author:'Lucas Tony',
             quantity: 2,
             image: "https://itbook.store/img/books/9781492043089.png",
-            url: "https://itbook.store/books/9781492043089"
         },
         {
             id:4,
@@ -90,7 +90,6 @@ const listBook = reactive({
             author:'Muramet Herera',
             quantity:2,
             image: "https://itbook.store/img/books/9781642002140.png",
-            url: "https://itbook.store/books/9781642002140"
         },
         {
             id:5,
@@ -99,7 +98,6 @@ const listBook = reactive({
             author:'Lucian',
             quantity: 2,
             image: "https://itbook.store/img/books/9783030541729.png",
-            url: "https://itbook.store/books/9783030541729"
         },
         {
             id:6,
@@ -108,7 +106,6 @@ const listBook = reactive({
             author:'Kenyan',
             quantity: 2,
             image: "https://itbook.store/img/books/9781493773077.png",
-            url: "https://itbook.store/books/9781493773077"
         },
         {
             id:7,
@@ -117,7 +114,6 @@ const listBook = reactive({
             author:'Maroon',
             quantity: 2,
             image: "https://itbook.store/img/books/9781492077213.png",
-            url: "https://itbook.store/books/9781492077213"
         },
         {
             id:8,
@@ -126,7 +122,6 @@ const listBook = reactive({
             author:'Thomas Lucas',
             quantity:2,
             image: "https://itbook.store/img/books/1001656678502.png",
-            url: "https://itbook.store/books/1001656678502"
         },
         {
             id:9,
@@ -135,7 +130,6 @@ const listBook = reactive({
             author:'Romelo Lukaku',
             quantity: 2,
             image: "https://itbook.store/img/books/9780137380350.png",
-            url: "https://itbook.store/books/9780137380350"
         },
         {
             id:10,
@@ -144,14 +138,28 @@ const listBook = reactive({
             author:'Kevin Debryne',
             quantity:2,
             image: "https://itbook.store/img/books/1001656317756.png",
-            url: "https://itbook.store/books/1001656317756"
         },
     ]
 })
+
+const dataProps = reactive({
+    data: {}
+});
 const isShowPopupAdd = ref(false);
+const isShowBorrowPopup = ref(false);
 
 const onShowPopupAdd = () => {
     isShowPopupAdd.value = true;
+}
+
+const onShowBorrow = (item) => {
+    console.log(item);
+    dataProps.data = item;
+    isShowBorrowPopup.value = true;
+}
+const handleSubmit = (data) => {
+    if(!listBook.data.some(c => c.id == data.id)) listBook.data.push(data);
+    else console.error(false);
 }
 // onMounted(async () => {
 //     listBook.data = [...books].splice(1,11);
