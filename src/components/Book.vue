@@ -158,8 +158,11 @@ const onShowBorrow = (item) => {
     isShowBorrowPopup.value = true;
 }
 const handleSubmit = (data) => {
-    if(!listBook.data.some(c => c.id == data.id)) listBook.data.push(data);
-    else console.error(false);
+    if(!listBook.data.some(c => c.id == data.id)) 
+        listBook.data.push(data);
+        console.log('Ban da them sach thanh cong')
+    else 
+        console.error('Loi them sach');
 }
 // onMounted(async () => {
 //     listBook.data = [...books].splice(1,11);
