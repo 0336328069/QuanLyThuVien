@@ -162,7 +162,7 @@ const handleSubmit = (data) => {
         listBook.data.push(data);
         console.log('Ban da them sach thanh cong')
     else 
-        console.error('Loi them sach');
+        console.error('Mã sách đã tồn tại');
 }
 // onMounted(async () => {
 //     listBook.data = [...books].splice(1,11);
